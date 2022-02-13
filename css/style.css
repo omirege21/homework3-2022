@@ -72,8 +72,20 @@ footer a:visited{
 
 /* Requirement 1 code here*/
 
-/* Requirement 2 code here*/
+a {
+  text-decoration: none;
+}
 
+
+
+/* Requirement 2 code here*/
+nav li a:hover{ 
+   text-decoration: underline wavy;
+}
+
+.container {
+  display: grid;
+}
 
 
 a.skip{
@@ -83,19 +95,36 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
-  
+  position: relative; right: 500px;
 }
 
 
 /* Requirement 4 code here*/
+nav ul li:focus-visible {
+  border-top: 2px yellow;
+}
 
 
 .container{
   /* Requirement 5 code here*/
+  grid-area: 1fr 5fr 1fr;
+  row-gap: 30px;
 
 }
 
 /* Requirements 6-10 here: */
+.intro {
+  background-image: 'images/header.jpg';
+  fallback: #DDDDDD, #858585, #707070, #B3B3B3;
+  /* Set a specific height */
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 
 
 
