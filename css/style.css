@@ -100,23 +100,22 @@ a.skip{
 
 
 /* Requirement 4 code here*/
-nav ul li:focus-visible {
+.focus{
   border-top: 2px yellow;
 }
 
 
 .container{
   /* Requirement 5 code here*/
-  grid-area: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   row-gap: 30px;
 
 }
 
 /* Requirements 6-10 here: */
 .intro {
-  background-image: 'images/header.jpg';
-  fallback: #DDDDDD, #858585, #707070, #B3B3B3;
-  /* Set a specific height */
+  background: #DDDDDD, #858585, #707070, #B3B3B3;
+  background-image: url("../images/header.jpg");
   min-height: 400px;
   background-attachment: fixed;
   background-position: center;
@@ -124,9 +123,41 @@ nav ul li:focus-visible {
   background-size: cover;
 }
 
+.about, .clients, .method, .contact {
+  grid-column: 2 / 3;
+}
 
+.about-image , .about {
+  grid-row: 1 / 2;
+}
 
+.clients-image , .clients {
+  grid-row: 2 / 3;
+}
 
+.method-image , .method {
+  grid-row: 3 / 4;
+}
+
+.contact-image , .contact {
+  grid-row: 4 / 5;
+}
+
+img {
+  width: 100%;
+}
+
+.about-image, .clients-image, .method-image, .contact-image {
+  grid-column: 1 / span 3;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.text {
+  align-self: center;
+  max-height: 25%;
+  overflow: scroll;
+}
 
 @media screen and (min-width: 700px){
   nav{
